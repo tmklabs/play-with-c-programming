@@ -5,8 +5,8 @@
 int main()
 {
     int n,alt_n,j;
-    /*alt_n is the alternative for n to count the digits in number n cuz we can't
-    use n cuz it will get changed while counting*/ 
+/*alt_n is the alternative for n to count the digits in number n cuz we can't
+        use n cuz it will get changed while counting*/ 
     j=0;
     printf("Enter the number you want to check if it's prime of not\n");
     scanf("%d",&n);
@@ -23,7 +23,6 @@ int main()
         alt_n/=10;
         j++;
     }
-
     if (n<0)
     {
         printf("You are entering a negative number \n");
@@ -34,11 +33,11 @@ int main()
     }
     else if (n%2==0)
     {
-        printf("%d is a composite number",n);
+        printf("2 is the factor of %d . Therefore %d is a composite number",n,n);
     }
     else if (c%3==0)
     {
-        printf("%d is a composite number",n);
+        printf("3 is the factor of %d . Therefore %d is a composite number",n,n);
     }
     else
     {
@@ -50,6 +49,7 @@ int main()
             {
                 if (n%i==0)
                 {
+                    printf("%d\t",i);
                     a++;
                 }
                 else 
@@ -62,7 +62,7 @@ int main()
         {
             if (d==5)
             {
-                printf("%d is a composite number \n",n);
+                printf("5 is the factor of %d. Therefore %d is a composite number \n",n,n);
             }
             else 
             {
@@ -70,6 +70,7 @@ int main()
                 {
                     if (n%i==0)
                     {
+                        printf("%d",i);
                         a++;
                     }
                     else 
@@ -81,7 +82,8 @@ int main()
         }
         if (a>0)
         {
-            printf("%d is a composite number\n",n);
+            printf(" is  a factor of %d\n",n);
+            printf("Therefore %d is a composite number\n",n);
         }
         else 
         {
